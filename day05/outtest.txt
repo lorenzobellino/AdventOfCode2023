@@ -1,0 +1,247 @@
+source_range: range(79, 93)
+_range: mapping_range(destination_range=range(50, 52), source_range=range(98, 100), range_length=2, delta=-48)
+_range: mapping_range(destination_range=range(52, 100), source_range=range(50, 98), range_length=48, delta=2)
+overlap_range: range(79, 93)
+source_range: range(79, 93)
+source range is contained in overlap range
+new_range1: range(81, 95)
+new_range2: None
+new_range3: None
+source_range: range(81, 95)
+_range: mapping_range(destination_range=range(0, 37), source_range=range(15, 52), range_length=37, delta=-15)
+_range: mapping_range(destination_range=range(37, 39), source_range=range(52, 54), range_length=2, delta=-15)
+_range: mapping_range(destination_range=range(39, 54), source_range=range(0, 15), range_length=15, delta=39)
+no overlap
+source : range(81, 95)
+destination : range(81, 95)
+
+source_range: range(81, 95)
+_range: mapping_range(destination_range=range(49, 57), source_range=range(53, 61), range_length=8, delta=-4)
+_range: mapping_range(destination_range=range(0, 42), source_range=range(11, 53), range_length=42, delta=-11)
+_range: mapping_range(destination_range=range(42, 49), source_range=range(0, 7), range_length=7, delta=42)
+_range: mapping_range(destination_range=range(57, 61), source_range=range(7, 11), range_length=4, delta=50)
+no overlap
+source : range(81, 95)
+destination : range(81, 95)
+
+source_range: range(81, 95)
+_range: mapping_range(destination_range=range(88, 95), source_range=range(18, 25), range_length=7, delta=70)
+_range: mapping_range(destination_range=range(18, 88), source_range=range(25, 95), range_length=70, delta=-7)
+overlap_range: range(81, 95)
+source_range: range(81, 95)
+source range is contained in overlap range
+new_range1: range(74, 88)
+new_range2: None
+new_range3: None
+source_range: range(74, 88)
+_range: mapping_range(destination_range=range(45, 68), source_range=range(77, 100), range_length=23, delta=-32)
+overlap_range: range(77, 88)
+source_range: range(74, 88)
+source range start before overlap range
+new_range1: range(74, 77)
+new_range2: range(45, 56)
+new_range3: None
+source_range: range(74, 77)
+_range: mapping_range(destination_range=range(0, 1), source_range=range(69, 70), range_length=1, delta=-69)
+_range: mapping_range(destination_range=range(1, 70), source_range=range(0, 69), range_length=69, delta=1)
+no overlap
+source : range(74, 77)
+destination : range(74, 77)
+
+source_range: range(74, 77)
+_range: mapping_range(destination_range=range(60, 97), source_range=range(56, 93), range_length=37, delta=4)
+overlap_range: range(74, 77)
+source_range: range(74, 77)
+source range is contained in overlap range
+new_range1: range(78, 81)
+new_range2: None
+new_range3: None
+mapping_id: 6
+	r1: 78
+	r2: None
+	r3: None
+result_mapping: 78
+result_mapping: 78
+source_range: range(45, 56)
+_range: mapping_range(destination_range=range(0, 1), source_range=range(69, 70), range_length=1, delta=-69)
+_range: mapping_range(destination_range=range(1, 70), source_range=range(0, 69), range_length=69, delta=1)
+overlap_range: range(45, 56)
+source_range: range(45, 56)
+source range is contained in overlap range
+new_range1: range(46, 57)
+new_range2: None
+new_range3: None
+source_range: range(46, 57)
+_range: mapping_range(destination_range=range(60, 97), source_range=range(56, 93), range_length=37, delta=4)
+overlap_range: range(56, 57)
+source_range: range(46, 57)
+source range start before overlap range
+new_range1: range(46, 56)
+new_range2: range(60, 61)
+new_range3: None
+mapping_id: 6
+	r1: 46
+	r2: 60
+	r3: None
+result_mapping: 46
+mapping_id: 5
+	r1: 46
+	r2: None
+	r3: None
+result_mapping: 46
+mapping_id: 4
+	r1: 78
+	r2: 46
+	r3: None
+result_mapping: 46
+mapping_id: 3
+	r1: 46
+	r2: None
+	r3: None
+result_mapping: 46
+result_mapping: 46
+result_mapping: 46
+mapping_id: 0
+	r1: 46
+	r2: None
+	r3: None
+result_mapping: 46
+output_range: 46
+source_range: range(55, 68)
+_range: mapping_range(destination_range=range(50, 52), source_range=range(98, 100), range_length=2, delta=-48)
+_range: mapping_range(destination_range=range(52, 100), source_range=range(50, 98), range_length=48, delta=2)
+overlap_range: range(55, 68)
+source_range: range(55, 68)
+source range is contained in overlap range
+new_range1: range(57, 70)
+new_range2: None
+new_range3: None
+source_range: range(57, 70)
+_range: mapping_range(destination_range=range(0, 37), source_range=range(15, 52), range_length=37, delta=-15)
+_range: mapping_range(destination_range=range(37, 39), source_range=range(52, 54), range_length=2, delta=-15)
+_range: mapping_range(destination_range=range(39, 54), source_range=range(0, 15), range_length=15, delta=39)
+no overlap
+source : range(57, 70)
+destination : range(57, 70)
+
+source_range: range(57, 70)
+_range: mapping_range(destination_range=range(49, 57), source_range=range(53, 61), range_length=8, delta=-4)
+overlap_range: range(57, 61)
+source_range: range(57, 70)
+source range start at overlap range start
+source range stop after overlap range
+new_range1: None
+new_range2: range(53, 57)
+new_range3: range(61, 70)
+source_range: range(53, 57)
+_range: mapping_range(destination_range=range(88, 95), source_range=range(18, 25), range_length=7, delta=70)
+_range: mapping_range(destination_range=range(18, 88), source_range=range(25, 95), range_length=70, delta=-7)
+overlap_range: range(53, 57)
+source_range: range(53, 57)
+source range is contained in overlap range
+new_range1: range(46, 50)
+new_range2: None
+new_range3: None
+source_range: range(46, 50)
+_range: mapping_range(destination_range=range(45, 68), source_range=range(77, 100), range_length=23, delta=-32)
+_range: mapping_range(destination_range=range(81, 100), source_range=range(45, 64), range_length=19, delta=36)
+overlap_range: range(46, 50)
+source_range: range(46, 50)
+source range is contained in overlap range
+new_range1: range(82, 86)
+new_range2: None
+new_range3: None
+source_range: range(82, 86)
+_range: mapping_range(destination_range=range(0, 1), source_range=range(69, 70), range_length=1, delta=-69)
+_range: mapping_range(destination_range=range(1, 70), source_range=range(0, 69), range_length=69, delta=1)
+no overlap
+source : range(82, 86)
+destination : range(82, 86)
+
+source_range: range(82, 86)
+_range: mapping_range(destination_range=range(60, 97), source_range=range(56, 93), range_length=37, delta=4)
+overlap_range: range(82, 86)
+source_range: range(82, 86)
+source range is contained in overlap range
+new_range1: range(86, 90)
+new_range2: None
+new_range3: None
+mapping_id: 6
+	r1: 86
+	r2: None
+	r3: None
+result_mapping: 86
+result_mapping: 86
+mapping_id: 4
+	r1: 86
+	r2: None
+	r3: None
+result_mapping: 86
+mapping_id: 3
+	r1: 86
+	r2: None
+	r3: None
+result_mapping: 86
+source_range: range(61, 70)
+_range: mapping_range(destination_range=range(88, 95), source_range=range(18, 25), range_length=7, delta=70)
+_range: mapping_range(destination_range=range(18, 88), source_range=range(25, 95), range_length=70, delta=-7)
+overlap_range: range(61, 70)
+source_range: range(61, 70)
+source range is contained in overlap range
+new_range1: range(54, 63)
+new_range2: None
+new_range3: None
+source_range: range(54, 63)
+_range: mapping_range(destination_range=range(45, 68), source_range=range(77, 100), range_length=23, delta=-32)
+_range: mapping_range(destination_range=range(81, 100), source_range=range(45, 64), range_length=19, delta=36)
+overlap_range: range(54, 63)
+source_range: range(54, 63)
+source range is contained in overlap range
+new_range1: range(90, 99)
+new_range2: None
+new_range3: None
+source_range: range(90, 99)
+_range: mapping_range(destination_range=range(0, 1), source_range=range(69, 70), range_length=1, delta=-69)
+_range: mapping_range(destination_range=range(1, 70), source_range=range(0, 69), range_length=69, delta=1)
+no overlap
+source : range(90, 99)
+destination : range(90, 99)
+
+source_range: range(90, 99)
+_range: mapping_range(destination_range=range(60, 97), source_range=range(56, 93), range_length=37, delta=4)
+overlap_range: range(90, 93)
+source_range: range(90, 99)
+source range start at overlap range start
+source range stop after overlap range
+new_range1: None
+new_range2: range(94, 97)
+new_range3: range(93, 99)
+mapping_id: 6
+	r1: None
+	r2: 94
+	r3: 93
+result_mapping: 93
+result_mapping: 93
+mapping_id: 4
+	r1: 93
+	r2: None
+	r3: None
+result_mapping: 93
+mapping_id: 3
+	r1: 93
+	r2: None
+	r3: None
+result_mapping: 93
+mapping_id: 2
+	r1: None
+	r2: 86
+	r3: 93
+result_mapping: 86
+result_mapping: 86
+mapping_id: 0
+	r1: 86
+	r2: None
+	r3: None
+result_mapping: 86
+output_range: 86
+46
