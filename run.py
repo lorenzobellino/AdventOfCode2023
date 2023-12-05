@@ -38,15 +38,16 @@ if __name__ == "__main__":
     parser.add_argument(
         "-d",
         "--day",
-        help="day of the challenge to solve",
+        help="Day of the challenge to solve",
         type=int,
         choices=range(1, 26),
         required=True,
+        metavar="{1..25}",
     )
     parser.add_argument(
         "-p",
         "--part",
-        help="part of the challenge to solve (1 or 2)",
+        help="Part of the challenge to solve (1 or 2)",
         type=int,
         choices=[1, 2],
         required=True,
@@ -57,7 +58,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "-t",
         "--test",
-        help="test mode - run challeng on test_input.txt",
+        help="Test mode - run challeng on test_input.txt",
         action="store_true",
     )
     args = parser.parse_args()
