@@ -1,8 +1,25 @@
 #!/bin/python3.9
 import argparse
+import logging
+
+logger_local = logging.getLogger("day01")
 
 
-def search_around(engine_schematic, r, c, rows, cols):
+class CustomFormatter(logging.Formatter):
+    def format(self, record):
+        if record.levelno == logging.DEBUG:
+            return f"[{record.name}] :: D - {record.msg}"
+        elif record.levelno == logging.INFO:
+            return f"[{record.name}] :: I - {record.msg}"
+        elif record.levelno == logging.WARNING:
+            return f"[{record.name}] :: W - {record.msg}"
+        elif record.levelno == logging.ERROR:
+            return f"[{record.name}] :: E - {record.msg}"
+        else:
+            return super().format(record)
+
+
+def search_around(engine_schematic, r, c, rows, cols, logger):
     numbers = []
     for i in range(r - 1, r + 2):
         for j in range(c - 1, c + 2):
@@ -24,7 +41,7 @@ def search_around(engine_schematic, r, c, rows, cols):
     return numbers
 
 
-def solver(args):
+def solver(args, logger):
     lines = open("input.txt", "r").readlines()
     rows = len(lines)
     cols = len(lines[0].strip())
@@ -40,7 +57,7 @@ def solver(args):
                     not engine_schematic[r][c].isdigit()
                     and engine_schematic[r][c] != "."
                 ):
-                    numbers = search_around(engine_schematic, r, c, rows, cols)
+                    numbers = search_around(engine_schematic, r, c, rows, cols, logger)
                     result += sum(numbers)
 
     else:
@@ -50,9 +67,11 @@ def solver(args):
                     not engine_schematic[r][c].isdigit()
                     and engine_schematic[r][c] == "*"
                 ):
-                    numbers = search_around(engine_schematic, r, c, rows, cols)
+                    numbers = search_around(engine_schematic, r, c, rows, cols, logger)
                     if len(numbers) == 2:
                         result += numbers[0] * numbers[1]
+
+    logger.debug(f"result: {result}")
 
     return result
 
@@ -70,5 +89,11 @@ if __name__ == "__main__":
         required=True,
     )
     args = parser.parse_args()
-    solution = solver(args)
-    print(solution)
+    logger_local.setLevel(level=logging.DEBUG if args.verbose else logging.INFO)
+
+    ch = logging.StreamHandler()
+    ch.setFormatter(CustomFormatter())
+
+    logger_local.addHandler(ch)
+    solution = solver(args, logger_local)
+    logger_local.info(solution)

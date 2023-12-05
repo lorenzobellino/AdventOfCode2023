@@ -1,9 +1,27 @@
 #!/bin/python3.9
 import argparse
 import re
+import logging
 
 
-def solver(args):
+logger_local = logging.getLogger("day01")
+
+
+class CustomFormatter(logging.Formatter):
+    def format(self, record):
+        if record.levelno == logging.DEBUG:
+            return f"[{record.name}] :: D - {record.msg}"
+        elif record.levelno == logging.INFO:
+            return f"[{record.name}] :: I - {record.msg}"
+        elif record.levelno == logging.WARNING:
+            return f"[{record.name}] :: W - {record.msg}"
+        elif record.levelno == logging.ERROR:
+            return f"[{record.name}] :: E - {record.msg}"
+        else:
+            return super().format(record)
+
+
+def solver(args, logger):
     lines = open("input.txt", "r").readlines()
     cards = dict()
     result = 0
@@ -31,6 +49,8 @@ def solver(args):
                 cards[i][2] += 1 * card[2]
             result += card[2]
 
+    logger.debug(f"result: {result}")
+
     return result
 
 
@@ -47,5 +67,11 @@ if __name__ == "__main__":
         required=True,
     )
     args = parser.parse_args()
-    solution = solver(args)
-    print(solution)
+    logger_local.setLevel(level=logging.DEBUG if args.verbose else logging.INFO)
+
+    ch = logging.StreamHandler()
+    ch.setFormatter(CustomFormatter())
+
+    logger_local.addHandler(ch)
+    solution = solver(args, logger_local)
+    logger_local.info(solution)

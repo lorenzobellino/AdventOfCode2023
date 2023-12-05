@@ -2,6 +2,25 @@
 import argparse
 from math import inf
 from collections import namedtuple
+import logging
+
+
+logger_local = logging.getLogger("day01")
+
+
+class CustomFormatter(logging.Formatter):
+    def format(self, record):
+        if record.levelno == logging.DEBUG:
+            return f"[{record.name}] :: D - {record.msg}"
+        elif record.levelno == logging.INFO:
+            return f"[{record.name}] :: I - {record.msg}"
+        elif record.levelno == logging.WARNING:
+            return f"[{record.name}] :: W - {record.msg}"
+        elif record.levelno == logging.ERROR:
+            return f"[{record.name}] :: E - {record.msg}"
+        else:
+            return super().format(record)
+
 
 orderd_map = {
     0: "seed-to-soli",
@@ -116,7 +135,7 @@ def map_source_to_destination_r(seed_range_list, mapping, mapping_id):
     return r
 
 
-def solver(args):
+def solver(args, logger):
     if args.test:
         lines = open("test_input.txt", "r").readlines()
     else:
@@ -219,7 +238,7 @@ def solver(args):
             mapped_output.append(map_source_to_destination_r([seed_range], mapping, 0))
 
         result = min(mapped_output)
-
+    logger.debug(f"result: {result}")
     return result
 
 
@@ -242,5 +261,11 @@ if __name__ == "__main__":
         action="store_true",
     )
     args = parser.parse_args()
-    solution = solver(args)
-    print(solution)
+    logger_local.setLevel(level=logging.DEBUG if args.verbose else logging.INFO)
+
+    ch = logging.StreamHandler()
+    ch.setFormatter(CustomFormatter())
+
+    logger_local.addHandler(ch)
+    solution = solver(args, logger_local)
+    logger_local.info(solution)
