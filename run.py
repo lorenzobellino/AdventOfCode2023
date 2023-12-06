@@ -24,8 +24,8 @@ class CustomFormatter(logging.Formatter):
 
 
 def run_challenge(args, logger):
-    name = f"day{args.day:02d}.solver"
-    os.chdir(f"day{args.day:02d}")
+    name = f"2023.day{args.day:02d}.solver"
+    os.chdir(f"2023/day{args.day:02d}")
     logger.info(f"Running {name} part {args.part}")
     main_module = importlib.import_module(name)
     solver = getattr(main_module, "solver")
