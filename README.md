@@ -15,3 +15,5 @@ if you prefer to run the code directly, you can do so by running
 cd day<day>
 poetry run python solver.py -p <part>
 ```
+
+Input files have been deleted from the repository as they are unique to each user. To run the code, you will need to download your input file from the Advent of Code website and place it in the `day<day>` folder with the name `input.txt` or `test_input.txt` for the short test input provided in the problem description.
