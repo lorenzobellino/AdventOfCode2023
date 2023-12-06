@@ -1,6 +1,10 @@
 # zoneIdentifier
 *.Identifier
 
+# AoC no input files
+input.txt
+test_input.txt
+
 # wandb
 /src/wandb/
 /wandb/
