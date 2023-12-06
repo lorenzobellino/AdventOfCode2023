@@ -34,7 +34,7 @@ mapping = {
 
 
 def solver(args, logger):
-    lines = open("puzzle.txt", "r").readlines()
+    lines = open("input.txt", "r").readlines()
     if args.part == 2:
         for m in mapping:
             lines = [l.replace(m, mapping[m]) for l in lines]
