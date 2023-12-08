@@ -58,7 +58,7 @@ def solver(args, logger):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Advent of Code 2023 - Day 8: Haunted Wasteland"
+        description="Advent of Code 2023 - Day 9: Mirage Maintenance"
     )
     parser.add_argument(
         "-p",
