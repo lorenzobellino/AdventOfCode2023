@@ -1,9 +1,14 @@
 # zoneIdentifier
 *.Identifier
 
-# AoC no input files
+# AoC 
 input.txt
 test_input.txt
+maze*
+test.py
+tt.py
+
+#
 
 # wandb
 /src/wandb/
