@@ -8,7 +8,8 @@ maze*
 test.py
 tt.py
 
-#
+#vscode
+.vscode/
 
 # wandb
 /src/wandb/
