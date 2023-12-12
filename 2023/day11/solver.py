@@ -91,7 +91,9 @@ def solver(args, logger):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Advent of Code 2023 - ")
+    parser = argparse.ArgumentParser(
+        description="Advent of Code 2023 - Day 11: Cosmic Expansion"
+    )
     parser.add_argument(
         "-p",
         "--part",
