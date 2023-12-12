@@ -1,4 +1,12 @@
 [[package]]
+name = "functools"
+version = "0.5"
+description = "Fast tools for functional programming"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "numpy"
 version = "1.26.2"
 description = "Fundamental package for array computing in Python"
@@ -9,9 +17,12 @@ python-versions = ">=3.9"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "92de320a77cd30270365a364c66a8660639ed80e4e90ba910ba6f3d588cf17de"
+content-hash = "2893b2c79990990a3bf9b9ed37a4165e0451486b38ac2dd4e9056e0d4c63207b"
 
 [metadata.files]
+functools = [
+    {file = "functools-0.5.tar.gz", hash = "sha256:596ed8999dee419c0749a41bfdd82e4697e80ea27ee01c716003ef55be9a54c5"},
+]
 numpy = [
     {file = "numpy-1.26.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:3703fc9258a4a122d17043e57b35e5ef1c5a5837c3db8be396c82e04c1cf9b0f"},
     {file = "numpy-1.26.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:cc392fdcbd21d4be6ae1bb4475a03ce3b025cd49a9be5345d76d7585aea69440"},
